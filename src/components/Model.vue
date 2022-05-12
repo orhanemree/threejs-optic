@@ -75,6 +75,20 @@ export default {
             plane.receiveShadow = true;
             this.scene.add(plane);
 
+            geometry = new THREE.PlaneGeometry(50, 20);
+            const wall1 = new THREE.Mesh(geometry, material);
+            wall1.position.z = 25;
+            wall1.position.y = 10;
+            wall1.receiveShadow = true;
+            this.scene.add(wall1);
+
+            const wall2 = new THREE.Mesh(geometry, material);
+            wall2.rotation.y = Math.PI / 2;
+            wall2.position.x = 25;
+            wall2.position.y = 10;
+            wall2.receiveShadow = true;
+            this.scene.add(wall2);
+
             this.pointLights = 0;
 
             // drag control
